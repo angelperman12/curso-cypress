@@ -4,7 +4,12 @@
   "description": "Curso de automatización de pruebas con cypress",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "limpiar-reporte": "rimraf ./allure-report  && rimraf ./allure-results",
+    "ejecutar-reporte": "cypress run --headed --env allure=true",
+    "generar-reporte": "allure generate allure-results -o allure-report --clean",
+    "abrir-reporte": "allure open",
+    "test": "npm run limpiar-reporte && npm run ejecutar-reporte && npm run generar-reporte && npm run abrir-reporte"
+    
   },
   "repository": {
     "type": "git",
@@ -19,5 +24,10 @@
   "homepage": "https://github.com/angelperman12/curso-cypress#readme",
   "devDependencies": {
     "cypress": "^13.13.0"
+  },
+  "dependencies": {
+    "@mmisty/cypress-allure-adapter": "^2.5.0",
+    "@shelex/cypress-allure-plugin": "^2.40.2",
+    "allure-commandline": "^2.29.0"
   }
 }
