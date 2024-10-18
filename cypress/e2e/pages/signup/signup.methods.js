@@ -1,3 +1,4 @@
+import { CommonPageMethos } from "../common-page/common-page.methods";
 import { SignupElements } from "./signup.elements";
 
 export class SignupMethods{
@@ -6,7 +7,7 @@ export class SignupMethods{
     }
 
     static insertPassword(password){
-        SignupElements.texboxes.password.invoke('val', password)
+        SignupElements.texboxes.password.invoke('val', password);
     }
 
     static clickOnSingup(){
@@ -14,8 +15,12 @@ export class SignupMethods{
     }
 
     static signup(username, password){
-        this.insertUsername(username)
-        this.insertPassword(password)
-        this.clickOnSingup()
+        this.insertUsername(username);
+        this.insertPassword(password);
+        this.clickOnSingup();
+    }
+
+    static verifySingUpSuccesfulMessageIsDisplayed(){
+        CommonPageMethos.verifyAlert("Sign up successful.");
     }
 }

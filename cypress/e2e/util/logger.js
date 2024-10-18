@@ -1,12 +1,12 @@
 export class Logger{
-    static stepNUmber(number){
-        const text = `Step # ${number}`
+    static stepNumber(number){
+        const text = `Step # ${number}`;
         cy.log(text)
         cy.allure().step(text)
     }
 
     static step(description){
-        const text = `Step - ${description}`
+        const text = `Step - ${description}`;
         cy.log(text)
         cy.allure().step(text)
     }

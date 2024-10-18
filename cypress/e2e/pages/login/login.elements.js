@@ -13,10 +13,10 @@ export  class LoginElements{
     static get buttons(){
         return{
             get close(){
-                return cy.get('div[id="logInModal"] button').eq(1);
+                return cy.get('div[id="logInModal"] button').eq(1); 
             },
             get login(){
-                return cy.contains('button', 'Log in');
+                return cy.contains('button', 'Log in'); 
             },
         };
     }
