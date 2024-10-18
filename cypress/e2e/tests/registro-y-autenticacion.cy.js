@@ -3,7 +3,7 @@ const { CommonPageMethos } = require("../pages/common-page/common-page.methods")
 const { SignupMethods } = require("../pages/signup/signup.methods")
 
 describe(CommonPageData.testSuites.registroYAutenticacion, () => {
-  it("Registro de usuario válido", () => {
+  it("Registro de usuario válido 1", () => {
 
     CommonPageMethos.navigateToDemoBla();
     CommonPageMethos.clickOnSignUpOption();
